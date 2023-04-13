@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 import Cart from '../Cart/Cart';
@@ -11,12 +11,16 @@ const Quiz = () => {
         <Container>
             <Row>
                 <Col xs={8}>
-                    {
-                        quizData.map(quiz => <Question
-                            key={quiz.id}
-                            quiz={quiz}
-                        ></Question>)
-                    }
+                    <h3 className='m-4'>"{loadQuiz.data.name}" related questions are here...</h3>
+                    <div>
+                        {
+                            quizData.map(quiz => <Question
+                                key={quiz.id}
+                                quiz={quiz}
+                            ></Question>)
+                        }
+                    </div>
+                    <Button className='mb-4'>Submit</Button>
                 </Col>
                 <Col sx={4}>
                     <div>
