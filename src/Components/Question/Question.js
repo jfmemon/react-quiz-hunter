@@ -7,7 +7,7 @@ const Question = ({ quiz }) => {
     return (
         <div className='question-container border m-4 p-3 bg-info bg-opacity-25'>
             <div>
-                <p>{quiz.question}</p>
+                <h5 className='my-3'>{quiz.question}</h5>
                 <div>
                     {
                         options.map(option => <Options

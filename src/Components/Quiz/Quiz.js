@@ -11,7 +11,7 @@ const Quiz = () => {
         <Container>
             <Row>
                 <Col xs={8}>
-                    <h3 className='m-4'>"{loadQuiz.data.name}" related questions are here...</h3>
+                    <h3 className='m-4'>"{loadQuiz.data.name}" Quiz</h3>
                     <div>
                         {
                             quizData.map(quiz => <Question
