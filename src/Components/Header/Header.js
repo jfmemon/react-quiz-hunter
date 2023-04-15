@@ -11,6 +11,7 @@ const Header = () => {
             <div>
                 <Link className='text-decoration-none fs-6 text-white fw-semibold' to='/'>Home</Link>
                 <Link className='text-decoration-none ms-5 fs-6 text-white fw-semibold' to='/chart'>Chart</Link>
+                <Link className='text-decoration-none ms-5 fs-6 text-white fw-semibold' to='/blog'>Blog</Link>
             </div>
         </nav>
     );
