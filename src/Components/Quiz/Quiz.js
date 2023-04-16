@@ -10,7 +10,7 @@ const Quiz = () => {
     return (
         <Container>
             <Row>
-                <Col xs={8}>
+                <Col xs={12} lg={8}>
                     <h3 className='m-4'>"{loadQuiz.data.name}" Quiz</h3>
                     <div>
                         {
@@ -22,7 +22,7 @@ const Quiz = () => {
                     </div>
                     <Button className='mb-4'>Submit</Button>
                 </Col>
-                <Col sx={4}>
+                <Col xs={12} lg={4}>
                     <div>
                         <Cart></Cart>
                     </div>
