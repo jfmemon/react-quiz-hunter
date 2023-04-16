@@ -8,10 +8,21 @@ const Question = ({ quiz }) => {
     console.log(quiz);
     const [show, setShow] = useState(false);
     const options = quiz.options;
-    const id = quiz.id;
+    const quizId = quiz.id;
     const setCorrectAnswer = () => {
         setShow(!show);
     }
+
+    const showResult = (option) => {
+        if (option === quiz.correctAnswer) {
+            // console.log('matched')
+            alert('Correct answer.');
+        } else {
+            // console.log('not matched')
+            alert('Incorrect answer.');
+        }
+    }
+
     return (
         <div className='question-container border m-4 p-3 bg-info bg-opacity-25'>
             <Toast onClose={setCorrectAnswer} show={show} animation={false}>
@@ -34,7 +45,9 @@ const Question = ({ quiz }) => {
                     {
                         options.map(option => <Options
                             option={option}
-                            id={id}
+                            key={quiz.id}
+                            id={quizId}
+                            showResult={showResult}
                         ></Options>)
                     }
                 </div>

@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import './Options.css';
 
-const Options = ({ option, id }) => {
-    const [active, setActive] = useState(false);
-    const handleBgColor = () => {
-        setActive(!active);
-    }
+const Options = ({ option, showResult, id }) => {
     return (
         <div>
-            <div onClick={handleBgColor} style={{backgroundColor: active ? 'gray' : 'white'}} className='border border-dark m-2 p-3 rounded' role="button">
+            <div onClick={() => showResult(option)} className='border border-dark m-2 p-3 rounded' role="button">
                 {option}
             </div>
         </div>
